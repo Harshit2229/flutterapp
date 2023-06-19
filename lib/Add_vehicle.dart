@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapp/My_bookings.dart';
+
 
 void main() {
   runApp(AddVehiclePage());
@@ -82,10 +84,10 @@ class _ScrollableRowOfBoxesState extends State<ScrollableRowOfBoxes> {
               ),
             ),
             const SizedBox(height: 20),
-            SingleChildScrollView(
+            const SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+                padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -93,17 +95,17 @@ class _ScrollableRowOfBoxesState extends State<ScrollableRowOfBoxes> {
                       image: 'assets/Sedan.png',
                       text: 'Sedan',
                     ),
-                    const SizedBox(width: 10),
+                    SizedBox(width: 10),
                     BoxItem(
                       image: 'assets/SUV.png',
                       text: 'SUV',
                     ),
-                    const SizedBox(width: 10),
+                    SizedBox(width: 10),
                     BoxItem(
                       image: 'assets/Hatchback.png',
                       text: 'Hatchback',
                     ),
-                    const SizedBox(width: 10),
+                    SizedBox(width: 10),
                     BoxItem(
                       image: 'assets/Pickup.png',
                       text: 'Pickup',
@@ -192,10 +194,11 @@ class _ScrollableRowOfBoxesState extends State<ScrollableRowOfBoxes> {
                     ),
                     onPressed: isSaveButtonEnabled()
                         ? () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => My_bookings(),
+                        ));
                       // Form is valid, perform save operation
-                      print('Save button pressed');
-                      print('Vehicle Name: $vehicleName');
-                      print('Color: $vehicleColor');
                     }
                         : null, // Disable the button if text fields are empty
                     child: const Text('Save'),
