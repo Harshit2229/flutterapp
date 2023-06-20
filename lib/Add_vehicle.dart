@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/My_bookings.dart';
+import 'package:flutterapp/appointment.dart';
 
 
 void main() {
@@ -196,7 +197,7 @@ class _ScrollableRowOfBoxesState extends State<ScrollableRowOfBoxes> {
                         ? () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => My_bookings(),
+                        MaterialPageRoute(builder: (context) => AppointmentPage(),
                         ));
                       // Form is valid, perform save operation
                     }

@@ -12,6 +12,184 @@ class _My_bookingsState extends State<My_bookings> {
   bool _isButton2Selected = false;
 
   @override
+  Widget _buildBookingDetails() {
+    if (_isButton1Selected) {
+      return Container(
+        width: 342.0,
+        height: 158.0,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10.0),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.3),
+              spreadRadius: 2.0,
+              blurRadius: 5.0,
+              offset: const Offset(0, 3),
+            ),
+          ],
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Row(
+            children: [
+              Container(
+                width: 126.0,
+                height: 171.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: Colors.blue,
+                ),
+                child: Image.asset('assets/Washing.png'),
+              ),
+              const SizedBox(width: 16.0),
+              const Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 10.0),
+                    Row(
+                      children: [
+                        Icon(Icons.car_crash, size: 20.0, color: Colors.blue),
+                        SizedBox(width: 6.0),
+                        Text(
+                          'Tesla Model S',
+                          style: TextStyle(fontSize: 16.0),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10.0),
+                    Row(
+                      children: [
+                        Icon(Icons.location_on, size: 20.0, color: Colors.blue),
+                        SizedBox(width: 6.0),
+                        Text(
+                          'Home',
+                          style: TextStyle(fontSize: 16.0),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10.0),
+                    Row(
+                      children: [
+                        Icon(Icons.calendar_today, size: 20.0, color: Colors.blue),
+                        SizedBox(width: 6.0),
+                        Text(
+                          '06-Sep-2022',
+                          style: TextStyle(fontSize: 16.0),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10.0),
+                    Row(
+                      children: [
+                        Icon(Icons.watch_later_outlined, size: 20.0, color: Colors.grey),
+                        SizedBox(width: 6.0),
+                        Text(
+                          '1PM - 2PM',
+                          style: TextStyle(fontSize: 16.0, color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    } else if (_isButton2Selected) {
+      return Container(
+        width: 342.0,
+        height: 158.0,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10.0),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.3),
+              spreadRadius: 2.0,
+              blurRadius: 5.0,
+              offset: const Offset(0, 3),
+            ),
+          ],
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Row(
+            children: [
+              Container(
+                width: 126.0,
+                height: 171.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: Colors.white,
+                ),
+                child: Image.asset('assets/Washing.png'),
+              ),
+              const SizedBox(width: 16.0),
+              const Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 10.0),
+                    Row(
+                      children: [
+                        Icon(Icons.car_crash, size: 20.0, color: Colors.blue),
+                        SizedBox(width: 6.0),
+                        Text(
+                          'Lamborghini Urus',
+                          style: TextStyle(fontSize: 16.0),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10.0),
+                    Row(
+                      children: [
+                        Icon(Icons.location_on, size: 20.0, color: Colors.blue),
+                        SizedBox(width: 6.0),
+                        Text(
+                          'Home',
+                          style: TextStyle(fontSize: 16.0),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10.0),
+                    Row(
+                      children: [
+                        Icon(Icons.calendar_today, size: 20.0, color: Colors.blue),
+                        SizedBox(width: 6.0),
+                        Text(
+                          '02-Sep-2022',
+                          style: TextStyle(fontSize: 16.0),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10.0),
+                    Row(
+                      children: [
+                        Icon(Icons.watch_later_outlined, size: 20.0, color: Colors.blue),
+                        SizedBox(width: 6.0),
+                        Text(
+                          '2PM - 3PM',
+                          style: TextStyle(fontSize: 16.0, color: Colors.black),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    } else {
+      // Default case, when neither button is selected
+      return const SizedBox();
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
@@ -73,7 +251,6 @@ class _My_bookingsState extends State<My_bookings> {
                         ),
                       ),
                     ),
-
                     Expanded(
                       child: GestureDetector(
                         onTap: () {
@@ -110,94 +287,75 @@ class _My_bookingsState extends State<My_bookings> {
               ),
             ),
             const SizedBox(height: 30.0),
-            Container(
-              width: 342.0,
-              height: 158.0,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10.0),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.3),
-                    spreadRadius: 2.0,
-                    blurRadius: 5.0,
-                    offset: const Offset(0, 3),
+            _buildBookingDetails(),
+          ],
+        ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.white,
+        child: Container(
+          height: 70.0,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  SizedBox(
+                    height: 50.0, // Add a fixed height
+                    child: IconButton(
+                      icon: const Icon(Icons.home, color: Colors.grey),
+                      onPressed: () {},
+                    ),
+                  ),
+                  const Text(
+                    'Home',
+                    style: TextStyle(color: Colors.grey),
                   ),
                 ],
               ),
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Row(
-                  children: [
-                    Container(
-                      width: 80.0,
-                      height: 80.0,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: Colors.blue,
-                      ),
-                      child: Image.asset('assets/Washing.png'),
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  SizedBox(
+                    height: 50.0, // Add a fixed height
+                    child: IconButton(
+                      icon: const Icon(Icons.bookmark, color: Colors.grey),
+                      onPressed: () {},
                     ),
-                    const SizedBox(width: 16.0),
-                    const Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Booking Information',
-                            style: TextStyle(
-                              fontSize: 14.0,
-                            ),
-                          ),
-                          SizedBox(height: 8.0),
-                          Row(
-                            children: [
-                              Icon(Icons.add_circle_outline, size: 20.0, color: Colors.black),
-                              SizedBox(width: 4.0),
-                              Text(
-                                'Car',
-                                style: TextStyle(fontSize: 14.0),
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 4.0),
-                          Row(
-                            children: [
-                              Icon(Icons.fmd_good_outlined, size: 20.0, color: Colors.black),
-                              SizedBox(width: 4.0),
-                              Text(
-                                'Map',
-                                style: TextStyle(fontSize: 14.0),
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 4.0),
-                          Row(
-                            children: [
-                              Icon(Icons.calendar_today, size: 20.0, color: Colors.black),
-                              SizedBox(width: 4.0),
-                              Text(
-                                'Calendar',
-                                style: TextStyle(fontSize: 14.0),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                    const Icon(
-                      Icons.arrow_forward_ios,
-                      color: Colors.grey,
-                      size: 20.0,
-                    ),
-                  ],
-                ),
+                  ),
+                  const Text(
+                    'Bookings',
+                    style: TextStyle(color: Colors.grey),
+                  ),
+                ],
               ),
-
-            ),
-          ],
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  SizedBox(
+                    height: 50.0, // Add a fixed height
+                    child: IconButton(
+                      icon: const Icon(Icons.person, color: Colors.grey),
+                      onPressed: () {},
+                    ),
+                  ),
+                  const Text(
+                    'Profile',
+                    style: TextStyle(color: Colors.grey),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
+}
+
+  void main() {
+  runApp(const MaterialApp(
+    home: My_bookings(),
+  ));
 }
