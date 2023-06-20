@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterapp/Sign_Up.dart';
 import 'package:flutterapp/forgot_password_page.dart';
 import 'package:flutterapp/app_large_text.dart';
+import 'package:flutterapp/home_screen.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -124,7 +125,7 @@ class _LoginPageState extends State<LoginPage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => SignupApp()),
+                      MaterialPageRoute(builder: (context) => HomePage()),
                     );
                   },
                   style: ButtonStyle(

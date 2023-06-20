@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapp/Garage1.dart';
 import 'package:flutterapp/My_bookings.dart';
 import 'package:flutterapp/appointment.dart';
 
@@ -197,7 +198,7 @@ class _ScrollableRowOfBoxesState extends State<ScrollableRowOfBoxes> {
                         ? () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => AppointmentPage(),
+                        MaterialPageRoute(builder: (context) => Garage1(),
                         ));
                       // Form is valid, perform save operation
                     }

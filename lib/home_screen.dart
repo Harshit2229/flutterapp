@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/Garage.dart';
+import 'package:flutterapp/wash_my_car.dart';
 
 void main() {
   runApp(const HomePage());
@@ -66,7 +67,7 @@ class HomePage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(context,
                   MaterialPageRoute(
-                  builder: (context) => Garage(),
+                  builder: (context) =>  WashMyCar(),
                    ));
                 },
               ),

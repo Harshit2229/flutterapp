@@ -9,36 +9,36 @@ class AppointmentPage extends StatefulWidget {
 
 class _AppointmentPageState extends State<AppointmentPage> {
   final List<String> textFieldText = [
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9',
-    '10',
-    '11',
-    '12',
-    '13',
-    '14',
-    '15',
-    '16',
-    '17',
-    '18',
-    '19',
-    '20',
-    '21',
-    '22',
-    '23',
-    '24',
-    '25',
-    '26',
-    '27',
-    '28',
-    '29',
-    '30 ',
+    'Mon 1', // Monday 1
+    'Tue 2', // Tuesday 2
+    'Wed 3', // Wednesday 3
+    'Thu 4', // Thursday 4
+    'Fri 5', // Friday 5
+    'Sat 6', // Saturday 6
+    'Sun 7', // Sunday 7
+    'Mon 8',
+    'Tue 9',
+    'Wed 10',
+    'Thu 11',
+    'Fri 12',
+    'Sat 13',
+    'Sun 14',
+    'Mon 15',
+    'Tue 16',
+    'Wed 17',
+    'Thu 18',
+    'Fri 19',
+    'Sat 20',
+    'Sun 21',
+    'Mon 22',
+    'Tue 23',
+    'Wed 24',
+    'Thu 25',
+    'Fri 26',
+    'Sat 27',
+    'Sun 28',
+    'Mon 29',
+    'Tue 30',
   ];
   final List<String> textFieldTexts = [
     '08:00 AM',
@@ -149,8 +149,8 @@ class _AppointmentPageState extends State<AppointmentPage> {
                     for (int i = 0; i < textFieldText.length; i++)
                       Container(
                         margin: const EdgeInsets.only(left: 13),
-                        width: 39,
-                        height: 48,
+                        width: 50,
+                        height: 50,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             primary: buttonStates[i] ? Colors.blue : Color(0xffF1F1F1),
@@ -166,6 +166,7 @@ class _AppointmentPageState extends State<AppointmentPage> {
                           child: Text(
                             textFieldText[i],
                             style: TextStyle(
+                              fontSize: 10,
                               color: buttonStates[i] ? Colors.white : Colors.black,
                             ),
                           ),
