@@ -75,6 +75,7 @@ flutter:
     - assets/Pickup.png
     - assets/Hatchback.png
     - assets/Sedan.png
+    - assets/Washing.png
 
 
         # An image asset can refer to one or more resolution-specific "variants", see
