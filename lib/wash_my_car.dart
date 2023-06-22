@@ -26,12 +26,6 @@ class _WashMyCarState extends State<WashMyCar> {
       // Rest of the build method code...
       // That's it! Now the WashMyCar page is a StatefulWidget, and when the "Next" button is pressed, it will navigate to the Garage1 page.
 
-
-
-
-
-
-
       body: ListView(
         children: [
           Container(
@@ -235,6 +229,7 @@ class _WashMyCarState extends State<WashMyCar> {
                     Text(
                       'Add Another Vehicle (Max 4) ',
                       style: TextStyle(
+                        fontFamily: 'Poppins',
                         fontSize: 16.0,
                         fontWeight: FontWeight.bold,
                         color: AppColors.blue,

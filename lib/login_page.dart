@@ -3,6 +3,8 @@ import 'package:flutterapp/sign_up.dart';
 import 'package:flutterapp/forgot_password_page.dart';
 import 'package:flutterapp/app_large_text.dart';
 import 'package:flutterapp/home_screen.dart';
+import 'package:flutterapp/theme/colors.dart';
+import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -21,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xfffCFEAFF),
+      backgroundColor: AppColors.wB,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,17 +44,22 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             const SizedBox(height: 20),
-            Container(height: 60),
-            const Padding(
-              padding: EdgeInsets.all(16),
-              child: Text(
-                'Log In',
-                style: TextStyle(
+            Container(height: 30),
+             Padding(
+              padding: const EdgeInsets.all(16),
+              child: GradientText(
+                'Log In ',
+                style: const TextStyle(
                   fontFamily: 'Poppins',
-                  color: Color(0xff3327C1),
+                  color: AppColors.blue,
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
+                colors: const [
+                  AppColors.darkBlue,
+                  AppColors.voilet,
+                  AppColors.lightPink,
+              ],
               ),
             ),
             Padding(
@@ -90,8 +97,8 @@ class _LoginPageState extends State<LoginPage> {
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30.0),
-                      boxShadow: [
-                        const BoxShadow(
+                      boxShadow: const [
+                        BoxShadow(
                           color: Color(0xffCFEAFF),
                           blurRadius: 5,
                           offset: Offset(0, 3),
@@ -143,7 +150,20 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                   ),
-                  child: AppText(text: "Login", color: const Color(0xff3327C1)),
+                  child: GradientText(
+                    'Log In ',
+                    style: const TextStyle(
+                      fontFamily: 'Poppins',
+                      color: AppColors.blue,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    colors: const [
+                      AppColors.darkBlue,
+                      AppColors.voilet,
+                      AppColors.lightPink,
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -161,13 +181,14 @@ class _LoginPageState extends State<LoginPage> {
                 child: const Text(
                    'Forgot Password?',
                   style: TextStyle(
-                    color: Colors.blue,
+                    fontFamily: 'Poppins',
+                    color: Colors.black,
                     decoration: TextDecoration.none,
                   ),
                 ),
               ),
             ),
-            Container(height: 20),
+            Container(height: 50),
             Align(
               alignment: Alignment.center,
               child: AppText(text: "Or continue with ", color: Colors.black38),
@@ -188,7 +209,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             Container(
-              height: 40,
+              height: 60,
             ),
             Container(
               child: Column(
@@ -211,6 +232,7 @@ class _LoginPageState extends State<LoginPage> {
                           child: const Text(
                             'Sign Up',
                             style: TextStyle(
+                              fontFamily: 'Poppins',
                               color: Colors.blue,
                               decoration: TextDecoration.none,
                             ),

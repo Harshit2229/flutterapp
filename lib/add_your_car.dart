@@ -33,6 +33,7 @@ class Garage1 extends StatelessWidget {
                 const Text(
                   'My Garage',
                   style: TextStyle(
+                    fontFamily: 'Poppins',
                     color: Colors.black,
                     fontSize: 24.0,
                     fontWeight: FontWeight.bold,
@@ -54,6 +55,7 @@ class Garage1 extends StatelessWidget {
                 const Text(
                   'There is no car in your garage',
                   style: TextStyle(
+                    fontFamily: 'Poppins',
                     color: Colors.grey,
                     fontSize: 16.0,
                   ),
@@ -79,6 +81,7 @@ class Garage1 extends StatelessWidget {
                       Text(
                         '  Add Your Car',
                         style: TextStyle(
+                          fontFamily: 'Poppins',
                           color: Colors.blue,
                           fontSize: 16.0,
                           fontWeight: FontWeight.bold,

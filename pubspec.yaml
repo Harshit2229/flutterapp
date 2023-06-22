@@ -30,7 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  simple_gradient_text: ^1.2.2
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -79,6 +79,7 @@ flutter:
     - assets/Vector.png
     - assets/Map.png
     - assets/Map_icon.png
+    - assets/icons/home.ico
 
 
         # An image asset can refer to one or more resolution-specific "variants", see

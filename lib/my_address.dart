@@ -47,6 +47,7 @@ class _MyAddressState extends State<MyAddress> {
                   child: Text(
                     'My Address',
                     style: TextStyle(
+                      fontFamily: 'Poppins',
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),
@@ -220,6 +221,7 @@ class _BoxItemState extends State<BoxItem> {
                 child: Text(
                   widget.text,
                   style: const TextStyle(
+                    fontFamily: 'Poppins',
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),

@@ -36,7 +36,7 @@ class ForgotPasswordPage extends StatelessWidget {
 
               ),
             ),
-            SizedBox(height: 14),
+            const SizedBox(height: 14),
             const Align(
               alignment: Alignment.center,
               child:Text ("Forgot Password? ",
@@ -51,10 +51,11 @@ class ForgotPasswordPage extends StatelessWidget {
 
             ),
             Container(height: 5,),
-            Align(
+            const Align(
               alignment: Alignment.center,
               child:Text ("Enter your registered email to",
                 style: TextStyle(
+                  fontFamily: 'Poppins',
                   fontSize: 12.0, // Set the desired font size here
                   fontWeight: FontWeight.w200,
 
@@ -63,10 +64,11 @@ class ForgotPasswordPage extends StatelessWidget {
 
 
             ),
-            Align(
+            const Align(
               alignment: Alignment.center,
               child:Text ("recieve password reset link.",
                 style: TextStyle(
+                  fontFamily: 'Poppins',
                   fontSize: 12.0, // Set the desired font size here
                   fontWeight: FontWeight.w200,
 
@@ -76,15 +78,15 @@ class ForgotPasswordPage extends StatelessWidget {
 
             ),
 
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16),
               child: TextField(
                 decoration: InputDecoration(
                   labelText: 'Email',
                 ),
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Padding(
               padding: const EdgeInsets.fromLTRB(60, 16, 12, 80),
               child: SizedBox(
@@ -92,7 +94,7 @@ class ForgotPasswordPage extends StatelessWidget {
 
                 height: 56,
 
-                child:Container(
+                child: Container(
 
                   child: ElevatedButton(
 
@@ -109,9 +111,9 @@ class ForgotPasswordPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    child:Text ("Send ",
+                    child:const Text ("Send ",
                       style: TextStyle(
-
+                        fontFamily: 'Poppins',
                         color: Color(0xffFFFFFF),
                         fontSize: 16.0, // Set the desired font size here
                         fontWeight: FontWeight.w500,
@@ -129,4 +131,3 @@ class ForgotPasswordPage extends StatelessWidget {
     );
   }
 }
-// TODO Implement this library.

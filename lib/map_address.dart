@@ -33,6 +33,7 @@ class MapAddress extends StatelessWidget {
                 const Text(
                   'My Address',
                   style: TextStyle(
+                    fontFamily: 'Poppins',
                     color: AppColors.black,
                     fontSize: 24.0,
                     fontWeight: FontWeight.bold,
@@ -54,6 +55,7 @@ class MapAddress extends StatelessWidget {
                 const Text(
                   'You haven’t saved any address',
                   style: TextStyle(
+                    fontFamily: 'Poppins',
                     color: AppColors.grey,
                     fontSize: 16.0,
                   ),
@@ -79,6 +81,7 @@ class MapAddress extends StatelessWidget {
                       Text(
                         'Add Your Address',
                         style: TextStyle(
+                          fontFamily: 'Poppins',
                           color: AppColors.blue,
                           fontSize: 16.0,
                           fontWeight: FontWeight.bold,

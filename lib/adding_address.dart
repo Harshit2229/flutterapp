@@ -115,8 +115,6 @@ class _AddingAddressState extends State<AddingAddress> {
 
               /////////
               //
-              ///
-              /// //add of new TextFielld
               const SizedBox(height: 190),
               Container(
                 height: 1,
@@ -147,6 +145,7 @@ class _AddingAddressState extends State<AddingAddress> {
                       child: const Text(
                         'Save',
                         style: TextStyle(
+                          fontFamily: 'Poppins',
                           color: AppColors.white,
                           fontSize: 20.0,
                         ),

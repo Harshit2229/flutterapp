@@ -46,6 +46,7 @@ class _GarageState extends State<Garage> {
                   child: Text(
                     'My Garage',
                     style: TextStyle(
+                      fontFamily: 'Poppins',
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),

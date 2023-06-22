@@ -1,19 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/theme/colors.dart';
 import 'package:flutterapp/wash_my_car.dart';
+import 'package:flutterapp/widgets/bottom_navigation_bar.dart';
 
 void main() {
   runApp(const HomePage());
 }
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
+
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int _selectedIndex = 0; // Add the _selectedIndex variable here
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: AppColors.white, // Set the background color here
+        backgroundColor: AppColors.white,
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -30,7 +38,7 @@ class HomePage extends StatelessWidget {
               ),
               ColorFiltered(
                 colorFilter: const ColorFilter.mode(
-                  AppColors.white, // Set the desired color here
+                  AppColors.white,
                   BlendMode.modulate,
                 ),
                 child: Container(
@@ -65,40 +73,47 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  Navigator.push(context,
-                  MaterialPageRoute(
-                  builder: (context) =>  WashMyCar(),
-                   ));
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const WashMyCar()),
+                  );
                 },
               ),
               const SizedBox(height: 80.0),
-              BottomNavigationBar(
+              CustomBottomNavigationBar(
                 items: [
                   BottomNavigationBarItem(
-                    icon: Image.asset(
-                      'assets/Frame.png',
-                      width: 30,
-                      height: 30,
+                    icon: RawMaterialButton(
+                      onPressed: () {},
+                      child: Image.asset(
+                        'assets/icons/home.ico',
+                        width: 24,
+                        height: 24,
+                      ),
                     ),
-                    label: '',
+                    label: 'Home',
                   ),
                   BottomNavigationBarItem(
-                    icon: Image.asset(
-                      'assets/book.png',
-                      width: 50,
-                      height: 50,
+                    icon: RawMaterialButton(
+                      onPressed: () {},
+                      child: Icon(Icons.search),
                     ),
-                    label: '',
+                    label: 'Search',
                   ),
                   BottomNavigationBarItem(
-                    icon: Image.asset(
-                      'assets/profile.png',
-                      width: 30,
-                      height: 30,
+                    icon: RawMaterialButton(
+                      onPressed: () {},
+                      child: Icon(Icons.person),
                     ),
-                    label: '',
+                    label: 'Profile',
                   ),
                 ],
+                currentIndex: _selectedIndex,
+                onTap: (index) {
+                  setState(() {
+                    _selectedIndex = index;
+                  });
+                },
               ),
             ],
           ),
