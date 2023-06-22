@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterapp/Garage.dart';
+import 'package:flutterapp/theme/colors.dart';
 import 'package:flutterapp/wash_my_car.dart';
 
 void main() {
@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.white, // Set the background color here
+        backgroundColor: AppColors.white, // Set the background color here
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
               ),
               ColorFiltered(
                 colorFilter: const ColorFilter.mode(
-                  Colors.white, // Set the desired color here
+                  AppColors.white, // Set the desired color here
                   BlendMode.modulate,
                 ),
                 child: Container(

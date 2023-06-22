@@ -77,6 +77,8 @@ flutter:
     - assets/Sedan.png
     - assets/Washing.png
     - assets/Vector.png
+    - assets/Map.png
+    - assets/Map_icon.png
 
 
         # An image asset can refer to one or more resolution-specific "variants", see

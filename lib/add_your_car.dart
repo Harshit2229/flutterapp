@@ -1,13 +1,7 @@
-
-
-
-
 import 'package:flutter/material.dart';
-import 'package:flutterapp/appointment.dart';
-
 import 'package:flutterapp/wash_my_car.dart';
 
-
+import 'add_vehicle.dart';
 
 class Garage1 extends StatelessWidget {
   const Garage1({Key? key});
@@ -23,11 +17,11 @@ class Garage1 extends StatelessWidget {
             child: Row(
               children: [
                 GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => WashMyCar()),
-                    );
+                  onTap: () { Navigator.push(context,
+                      MaterialPageRoute(
+                        builder: (context) => const WashMyCar(),
+                      ));
+                    // Handle icon button press
                   },
                   child: const Icon(
                     Icons.arrow_back,
@@ -52,7 +46,7 @@ class Garage1 extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  'assets/images/mygarage.png',
+                  'assets/Garage.png',
                   width: 300,
                   height: 300,
                 ),
@@ -69,7 +63,7 @@ class Garage1 extends StatelessWidget {
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(
-                          builder: (context) => AppointmentPage(),
+                          builder: (context) => AddVehiclePage(),
                         ));
                     // Handle add car button press
                   },
@@ -101,8 +95,3 @@ class Garage1 extends StatelessWidget {
     );
   }
 }
-
-
-
-
-//Garage.dart

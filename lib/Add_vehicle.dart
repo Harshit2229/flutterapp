@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutterapp/Garage1.dart';
-import 'package:flutterapp/My_bookings.dart';
-import 'package:flutterapp/appointment.dart';
+import 'package:flutterapp/my_garage.dart';
+import 'package:flutterapp/theme/colors.dart';
+
+import 'add_your_car.dart';
 
 
 void main() {
@@ -9,6 +10,8 @@ void main() {
 }
 
 class AddVehiclePage extends StatelessWidget {
+  const AddVehiclePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -51,10 +54,14 @@ class _ScrollableRowOfBoxesState extends State<ScrollableRowOfBoxes> {
               child: IconButton(
                 icon: const Icon(
                   Icons.arrow_back,
-                  color: Colors.blue,
+                  color: AppColors.blue,
                   size: 35,
                 ),
                 onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Garage1(),
+                      ));
                   // Add your onPressed logic here
                 },
               ),
@@ -68,7 +75,7 @@ class _ScrollableRowOfBoxesState extends State<ScrollableRowOfBoxes> {
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                  color: AppColors.black,
                 ),
               ),
             ),
@@ -81,7 +88,7 @@ class _ScrollableRowOfBoxesState extends State<ScrollableRowOfBoxes> {
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
-                  color: Colors.grey,
+                  color: AppColors.grey,
                 ),
               ),
             ),
@@ -123,7 +130,7 @@ class _ScrollableRowOfBoxesState extends State<ScrollableRowOfBoxes> {
                 decoration: const InputDecoration(
                   labelText: 'Vehicle Name',
                   labelStyle: TextStyle(
-                    color: Color(0xFF999999),
+                    color: AppColors.grey,
                   ),
                   contentPadding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
                 ),
@@ -141,7 +148,7 @@ class _ScrollableRowOfBoxesState extends State<ScrollableRowOfBoxes> {
                 decoration: const InputDecoration(
                   labelText: 'Color',
                   labelStyle: TextStyle(
-                    color: Color(0xFF999999),
+                    color: AppColors.grey,
                   ),
                   contentPadding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
                 ),
@@ -155,7 +162,7 @@ class _ScrollableRowOfBoxesState extends State<ScrollableRowOfBoxes> {
             const SizedBox(height: 200),
             Container(
               height: 1,
-              color: Colors.grey,
+              color: AppColors.grey,
             ),
             const SizedBox(height: 20),
             Container(
@@ -168,7 +175,7 @@ class _ScrollableRowOfBoxesState extends State<ScrollableRowOfBoxes> {
                       backgroundColor: MaterialStateProperty.resolveWith<Color>(
                             (Set<MaterialState> states) {
                           if (isSaveButtonFilled()) {
-                            return Colors.blue; // Filled button color
+                            return AppColors.blue; // Filled button color
                           }
                           return Colors.transparent; // Transparent button color
                         },
@@ -176,16 +183,16 @@ class _ScrollableRowOfBoxesState extends State<ScrollableRowOfBoxes> {
                       foregroundColor: MaterialStateProperty.resolveWith<Color>(
                             (Set<MaterialState> states) {
                           if (isSaveButtonFilled()) {
-                            return Colors.white; // Filled button text color
+                            return AppColors.white; // Filled button text color
                           }
-                          return Colors.blue; // Outline button text color
+                          return AppColors.blue; // Outline button text color
                         },
                       ),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12.0),
                           side: const BorderSide(
-                            color: Colors.blue, // Outline button border color
+                            color: AppColors.blue, // Outline button border color
                             width: 2.0, // Outline button border width
                           ),
                         ),
@@ -198,7 +205,7 @@ class _ScrollableRowOfBoxesState extends State<ScrollableRowOfBoxes> {
                         ? () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Garage1(),
+                        MaterialPageRoute(builder: (context) => const Garage(),
                         ));
                       // Form is valid, perform save operation
                     }
@@ -251,7 +258,7 @@ class _BoxItemState extends State<BoxItem> {
           height: 150,
           margin: const EdgeInsets.only(right: 10),
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: AppColors.white,
             borderRadius: BorderRadius.circular(8),
           ),
           child: Column(
@@ -268,7 +275,7 @@ class _BoxItemState extends State<BoxItem> {
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
-                  color: Colors.grey,
+                  color: AppColors.grey,
                 ),
               ),
             ],

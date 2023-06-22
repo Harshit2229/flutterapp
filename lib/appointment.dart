@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutterapp/My_bookings.dart';
-import 'package:flutterapp/Sign_Up.dart';
+import 'package:flutterapp/my_bookings.dart';
+import 'package:flutterapp/sign_up.dart';
+import 'package:flutterapp/theme/colors.dart';
 
 class AppointmentPage extends StatefulWidget {
   @override
@@ -89,7 +90,7 @@ class _AppointmentPageState extends State<AppointmentPage> {
                 child: IconButton(
                   icon: const Icon(
                     Icons.arrow_back,
-                    color: Color(0xff277FC1),
+                    color: AppColors.blue,
                     size: 35,
                   ),
                   onPressed: () {
@@ -121,7 +122,7 @@ class _AppointmentPageState extends State<AppointmentPage> {
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 16.0,
-                      color: Color(0xff999999),
+                      color: AppColors.grey,
                       fontWeight: FontWeight.w400,
                     ),
                   ),
@@ -133,7 +134,7 @@ class _AppointmentPageState extends State<AppointmentPage> {
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 16.0,
-                      color: Colors.black,
+                      color: AppColors.black,
                       fontWeight: FontWeight.w400,
                     ),
                   ),
@@ -153,7 +154,7 @@ class _AppointmentPageState extends State<AppointmentPage> {
                         height: 50,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            primary: buttonStates[i] ? Colors.blue : Color(0xffF1F1F1),
+                            primary: buttonStates[i] ? Colors.blue : const Color(0xffF1F1F1),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(8),
                             ),
@@ -179,7 +180,7 @@ class _AppointmentPageState extends State<AppointmentPage> {
             Container(height: 20),
             Container(
               height: 1,
-              color: Colors.grey,
+              color: AppColors.grey,
             ),
             Container(height: 15),
             Container(
@@ -189,8 +190,8 @@ class _AppointmentPageState extends State<AppointmentPage> {
                 style: TextStyle(
                   fontFamily: 'Poppins',
                   fontSize: 16.0,
-                  color: Color(0xff999999),
                   fontWeight: FontWeight.w400,
+                  color: AppColors.grey,
                 ),
               ),
             ),
@@ -214,7 +215,7 @@ class _AppointmentPageState extends State<AppointmentPage> {
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(13),
                                     side: BorderSide(
-                                      color: buttonStates[i * 3 + j] ? Color(0xff277FC1) : Color(0xff277FC1),
+                                      color: buttonStates[i * 3 + j] ? const Color(0xff277FC1) : const Color(0xff277FC1),
                                       width: 1.0,
                                     ),
                                   ),
@@ -248,8 +249,8 @@ class _AppointmentPageState extends State<AppointmentPage> {
                                 primary: buttonStates[24 + j] ? Colors.blue : Colors.white,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(13),
-                                  side: BorderSide(
-                                    color:  Color(0xff277FC1)
+                                  side: const BorderSide(
+                                    color: AppColors.blue,
                                   ),
                                 ),
                               ),
@@ -278,7 +279,7 @@ class _AppointmentPageState extends State<AppointmentPage> {
                   Container(height: 20),
                   Container(
                     height: 1,
-                    color: Colors.grey,
+                    color: AppColors.grey,
                   ),
                   const SizedBox(
                     height: 8,
@@ -294,9 +295,9 @@ class _AppointmentPageState extends State<AppointmentPage> {
                           decoration: BoxDecoration(
                             shape: BoxShape.rectangle,
                             borderRadius: BorderRadius.circular(15.0),
-                            color: Colors.blue,
+                            color: AppColors.blue,
                             border: Border.all(
-                              color: const Color(0xFFFEFEFF),
+                              color: AppColors.white,
                               width: 2.0,
                             ),
                           ),
@@ -312,7 +313,7 @@ class _AppointmentPageState extends State<AppointmentPage> {
                             child: const Text(
                               'Save',
                               style: TextStyle(
-                                color: Color(0xffFFFFFF),
+                                color: AppColors.white,
                                 fontFamily: 'Poppins',
                                 fontSize: 16.0,
                               ),

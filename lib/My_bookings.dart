@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapp/theme/colors.dart';
 
 class My_bookings extends StatefulWidget {
   const My_bookings({Key? key});
@@ -18,7 +19,7 @@ class _My_bookingsState extends State<My_bookings> {
         width: 342.0,
         height: 158.0,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: AppColors.white,
           borderRadius: BorderRadius.circular(10.0),
           boxShadow: [
             BoxShadow(
@@ -38,7 +39,7 @@ class _My_bookingsState extends State<My_bookings> {
                 height: 171.0,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
-                  color: Colors.blue,
+                  color: AppColors.blue,
                 ),
                 child: Image.asset('assets/Washing.png'),
               ),
@@ -50,7 +51,7 @@ class _My_bookingsState extends State<My_bookings> {
                     SizedBox(height: 10.0),
                     Row(
                       children: [
-                        Icon(Icons.car_crash, size: 20.0, color: Colors.blue),
+                        Icon(Icons.car_crash, size: 20.0, color: AppColors.blue),
                         SizedBox(width: 6.0),
                         Text(
                           'Tesla Model S',
@@ -61,7 +62,7 @@ class _My_bookingsState extends State<My_bookings> {
                     SizedBox(height: 10.0),
                     Row(
                       children: [
-                        Icon(Icons.location_on, size: 20.0, color: Colors.blue),
+                        Icon(Icons.location_on, size: 20.0, color: AppColors.blue),
                         SizedBox(width: 6.0),
                         Text(
                           'Home',
@@ -72,7 +73,7 @@ class _My_bookingsState extends State<My_bookings> {
                     SizedBox(height: 10.0),
                     Row(
                       children: [
-                        Icon(Icons.calendar_today, size: 20.0, color: Colors.blue),
+                        Icon(Icons.calendar_today, size: 20.0, color: AppColors.blue),
                         SizedBox(width: 6.0),
                         Text(
                           '06-Sep-2022',
@@ -83,11 +84,11 @@ class _My_bookingsState extends State<My_bookings> {
                     SizedBox(height: 10.0),
                     Row(
                       children: [
-                        Icon(Icons.watch_later_outlined, size: 20.0, color: Colors.grey),
+                        Icon(Icons.watch_later_outlined, size: 20.0, color: AppColors.grey),
                         SizedBox(width: 6.0),
                         Text(
                           '1PM - 2PM',
-                          style: TextStyle(fontSize: 16.0, color: Colors.grey),
+                          style: TextStyle(fontSize: 16.0, color: AppColors.grey),
                         ),
                       ],
                     ),
@@ -103,11 +104,11 @@ class _My_bookingsState extends State<My_bookings> {
         width: 342.0,
         height: 158.0,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: AppColors.white,
           borderRadius: BorderRadius.circular(10.0),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.3),
+              color: AppColors.grey.withOpacity(0.3),
               spreadRadius: 2.0,
               blurRadius: 5.0,
               offset: const Offset(0, 3),
@@ -123,7 +124,7 @@ class _My_bookingsState extends State<My_bookings> {
                 height: 171.0,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10.0),
-                  color: Colors.white,
+                  color: AppColors.white,
                 ),
                 child: Image.asset('assets/Washing.png'),
               ),
@@ -135,7 +136,7 @@ class _My_bookingsState extends State<My_bookings> {
                     SizedBox(height: 10.0),
                     Row(
                       children: [
-                        Icon(Icons.car_crash, size: 20.0, color: Colors.blue),
+                        Icon(Icons.car_crash, size: 20.0, color: AppColors.blue),
                         SizedBox(width: 6.0),
                         Text(
                           'Lamborghini Urus',
@@ -146,7 +147,7 @@ class _My_bookingsState extends State<My_bookings> {
                     SizedBox(height: 10.0),
                     Row(
                       children: [
-                        Icon(Icons.location_on, size: 20.0, color: Colors.blue),
+                        Icon(Icons.location_on, size: 20.0, color: AppColors.blue),
                         SizedBox(width: 6.0),
                         Text(
                           'Home',
@@ -157,7 +158,7 @@ class _My_bookingsState extends State<My_bookings> {
                     SizedBox(height: 10.0),
                     Row(
                       children: [
-                        Icon(Icons.calendar_today, size: 20.0, color: Colors.blue),
+                        Icon(Icons.calendar_today, size: 20.0, color: AppColors.blue),
                         SizedBox(width: 6.0),
                         Text(
                           '02-Sep-2022',
@@ -168,11 +169,11 @@ class _My_bookingsState extends State<My_bookings> {
                     SizedBox(height: 10.0),
                     Row(
                       children: [
-                        Icon(Icons.watch_later_outlined, size: 20.0, color: Colors.blue),
+                        Icon(Icons.watch_later_outlined, size: 20.0, color: AppColors.blue),
                         SizedBox(width: 6.0),
                         Text(
                           '2PM - 3PM',
-                          style: TextStyle(fontSize: 16.0, color: Colors.black),
+                          style: TextStyle(fontSize: 16.0, color: AppColors.black),
                         ),
                       ],
                     ),
@@ -203,7 +204,7 @@ class _My_bookingsState extends State<My_bookings> {
                 child: Text(
                   'My Bookings',
                   style: TextStyle(
-                    color: Colors.black,
+                    color: AppColors.black,
                     fontSize: 24.0,
                     fontWeight: FontWeight.bold,
                   ),
@@ -215,7 +216,7 @@ class _My_bookingsState extends State<My_bookings> {
               height: 48.0,
               child: Container(
                 decoration: BoxDecoration(
-                  color: const Color(0xFFF1F1F1), // Use the #F1F1F1 color
+                  color: AppColors.white, // Use the #F1F1F1 color
                   borderRadius: BorderRadius.circular(20.0),
                 ),
                 child: Row(
@@ -234,14 +235,14 @@ class _My_bookingsState extends State<My_bookings> {
                             width: 164.0,
                             height: 32.0,
                             decoration: BoxDecoration(
-                              color: _isButton1Selected ? Colors.blue : Colors.transparent,
+                              color: _isButton1Selected ? AppColors.blue : Colors.transparent,
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             child: Center(
                               child: Text(
                                 'Upcoming',
                                 style: TextStyle(
-                                  color: _isButton1Selected ? Colors.white : Colors.black,
+                                  color: _isButton1Selected ? AppColors.white : AppColors.black,
                                   fontSize: 18.0,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -265,14 +266,14 @@ class _My_bookingsState extends State<My_bookings> {
                             width: 164.0,
                             height: 32.0,
                             decoration: BoxDecoration(
-                              color: _isButton2Selected ? Colors.blue : Colors.transparent,
+                              color: _isButton2Selected ? AppColors.blue : Colors.transparent,
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             child: Center(
                               child: Text(
                                 'Completed',
                                 style: TextStyle(
-                                  color: _isButton2Selected ? Colors.white : Colors.black,
+                                  color: _isButton2Selected ? AppColors.white : AppColors.black,
                                   fontSize: 18.0,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -292,7 +293,7 @@ class _My_bookingsState extends State<My_bookings> {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        color: Colors.white,
+        color: AppColors.white,
         child: Container(
           height: 70.0,
           child: Row(
@@ -304,13 +305,13 @@ class _My_bookingsState extends State<My_bookings> {
                   SizedBox(
                     height: 50.0, // Add a fixed height
                     child: IconButton(
-                      icon: const Icon(Icons.home, color: Colors.grey),
+                      icon: const Icon(Icons.home, color: AppColors.grey),
                       onPressed: () {},
                     ),
                   ),
                   const Text(
                     'Home',
-                    style: TextStyle(color: Colors.grey),
+                    style: TextStyle(color: AppColors.grey),
                   ),
                 ],
               ),
@@ -320,13 +321,13 @@ class _My_bookingsState extends State<My_bookings> {
                   SizedBox(
                     height: 50.0, // Add a fixed height
                     child: IconButton(
-                      icon: const Icon(Icons.bookmark, color: Colors.grey),
+                      icon: const Icon(Icons.bookmark, color: AppColors.grey),
                       onPressed: () {},
                     ),
                   ),
                   const Text(
                     'Bookings',
-                    style: TextStyle(color: Colors.grey),
+                    style: TextStyle(color: AppColors.grey),
                   ),
                 ],
               ),
@@ -336,13 +337,13 @@ class _My_bookingsState extends State<My_bookings> {
                   SizedBox(
                     height: 50.0, // Add a fixed height
                     child: IconButton(
-                      icon: const Icon(Icons.person, color: Colors.grey),
+                      icon: const Icon(Icons.person, color: AppColors.grey),
                       onPressed: () {},
                     ),
                   ),
                   const Text(
                     'Profile',
-                    style: TextStyle(color: Colors.grey),
+                    style: TextStyle(color: AppColors.grey),
                   ),
                 ],
               ),

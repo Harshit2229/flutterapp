@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterapp/Sign_Up.dart';
+import 'package:flutterapp/sign_up.dart';
 import 'package:flutterapp/forgot_password_page.dart';
 import 'package:flutterapp/app_large_text.dart';
 import 'package:flutterapp/home_screen.dart';
@@ -21,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xfffCFEAFF),
+      backgroundColor: const Color(0xfffCFEAFF),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,7 +41,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Container(height: 60),
             const Padding(
               padding: EdgeInsets.all(16),
@@ -71,7 +71,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ],
                     ),
-                    child: TextField(
+                    child: const TextField(
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                         labelText: 'Email',
@@ -81,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
                 ],
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Container(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -91,7 +91,7 @@ class _LoginPageState extends State<LoginPage> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30.0),
                       boxShadow: [
-                        BoxShadow(
+                        const BoxShadow(
                           color: Color(0xffCFEAFF),
                           blurRadius: 5,
                           offset: Offset(0, 3),
@@ -116,7 +116,7 @@ class _LoginPageState extends State<LoginPage> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Align(
               alignment: Alignment.center,
               child: Padding(
@@ -125,11 +125,11 @@ class _LoginPageState extends State<LoginPage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => HomePage()),
+                      MaterialPageRoute(builder: (context) => const HomePage()),
                     );
                   },
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(Color(0xffCFEAFF)),
+                    backgroundColor: MaterialStateProperty.all<Color>(const Color(0xffCFEAFF)),
                     padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
                       const EdgeInsets.symmetric(vertical: 16.0, horizontal: 70.0),
                       // Adjust the padding value as needed
@@ -143,7 +143,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                   ),
-                  child: AppText(text: "Login", color: Color(0xff3327C1)),
+                  child: AppText(text: "Login", color: const Color(0xff3327C1)),
                 ),
               ),
             ),
@@ -178,11 +178,11 @@ class _LoginPageState extends State<LoginPage> {
             Container(
               child: Row(
                 children: [
-                  SizedBox(width: 85.0),
+                  const SizedBox(width: 85.0),
                   Image.asset('assets/Google.png'),
-                  SizedBox(width: 50.0),
+                  const SizedBox(width: 50.0),
                   Image.asset('assets/g10.png'),
-                  SizedBox(width: 50.0),
+                  const SizedBox(width: 50.0),
                   Image.asset('assets/white_background.png'),
                 ],
               ),
@@ -205,7 +205,7 @@ class _LoginPageState extends State<LoginPage> {
                             // For example, show a password recovery dialog or navigate to a password recovery screen
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => SignupApp()),
+                              MaterialPageRoute(builder: (context) => const SignupApp()),
                             );
                           },
                           child: const Text(
