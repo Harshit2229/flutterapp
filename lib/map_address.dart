@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/adding_address.dart';
 import 'package:flutterapp/theme/colors.dart';
-import 'package:flutterapp/wash_my_car.dart';
+import 'package:flutterapp/cars/wash_my_car.dart';
 
 class MapAddress extends StatelessWidget {
   const MapAddress({super.key});

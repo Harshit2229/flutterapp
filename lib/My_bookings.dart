@@ -273,6 +273,7 @@ class _My_bookingsState extends State<My_bookings> {
                               child: Text(
                                 'Completed',
                                 style: TextStyle(
+                                  fontFamily: 'Poppins',
                                   color: _isButton2Selected ? AppColors.white : AppColors.black,
                                   fontSize: 18.0,
                                   fontWeight: FontWeight.bold,
@@ -311,7 +312,10 @@ class _My_bookingsState extends State<My_bookings> {
                   ),
                   const Text(
                     'Home',
-                    style: TextStyle(color: AppColors.grey),
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
+                      color: AppColors.grey,
+                    ),
                   ),
                 ],
               ),
@@ -327,7 +331,10 @@ class _My_bookingsState extends State<My_bookings> {
                   ),
                   const Text(
                     'Bookings',
-                    style: TextStyle(color: AppColors.grey),
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
+                      color: AppColors.grey,
+                    ),
                   ),
                 ],
               ),
@@ -343,7 +350,10 @@ class _My_bookingsState extends State<My_bookings> {
                   ),
                   const Text(
                     'Profile',
-                    style: TextStyle(color: AppColors.grey),
+                    style: TextStyle(
+                      fontFamily: 'Poppins',
+                      color: AppColors.grey,
+                    ),
                   ),
                 ],
               ),

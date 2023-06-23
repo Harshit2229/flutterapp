@@ -114,6 +114,7 @@ class _SignupPageState extends State<SignupPage> {
                       decoration: const InputDecoration(
                         labelText: 'Name',
                         labelStyle: TextStyle(
+                          fontFamily: 'Poppins',
                           color: Color(0xFF999999),
                         ),
                         contentPadding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
@@ -132,6 +133,7 @@ class _SignupPageState extends State<SignupPage> {
                       decoration: const InputDecoration(
                         labelText: 'Email',
                         labelStyle: TextStyle(
+                          fontFamily: 'Poppins',
                           color: Color(0xFF999999),
                         ),
                         contentPadding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
@@ -151,6 +153,7 @@ class _SignupPageState extends State<SignupPage> {
                       decoration: const InputDecoration(
                         labelText: 'Phone',
                         labelStyle: TextStyle(
+                          fontFamily: 'Poppins',
                           color: Color(0xFF999999),
                         ),
                         contentPadding: EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
@@ -170,6 +173,7 @@ class _SignupPageState extends State<SignupPage> {
                       decoration: InputDecoration(
                         labelText: 'Password',
                         labelStyle: const TextStyle(
+                          fontFamily: 'Poppins',
                           color: Color(0xFF999999),
                         ),
                         suffixIcon: GestureDetector(
@@ -200,6 +204,7 @@ class _SignupPageState extends State<SignupPage> {
                       decoration: InputDecoration(
                         labelText: 'Confirm Password',
                         labelStyle: const TextStyle(
+                          fontFamily: 'Poppins',
                           color: Color(0xFF999999),
                         ),
                         suffixIcon: GestureDetector(
@@ -262,6 +267,7 @@ class _SignupPageState extends State<SignupPage> {
                               Text(
                                 'Already have an account? ',
                                 style: TextStyle(
+                                  fontFamily: 'Poppins',
                                   fontSize: 16.0,
                                   color: Colors.black,
                                 ),
@@ -269,6 +275,7 @@ class _SignupPageState extends State<SignupPage> {
                               Text(
                                 'Login',
                                 style: TextStyle(
+                                  fontFamily: 'Poppins',
                                   fontSize: 16.0,
                                   color: Colors.blue,
                                 ),

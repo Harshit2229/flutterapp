@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutterapp/login_page.dart';
-import 'package:flutterapp/splash_screen.dart';
+import 'package:flutterapp/login/login_page.dart';
+import 'package:flutterapp/login/splash_screen.dart';
 
 const Color myCustomColor = Color(0xCFEAFF);
 

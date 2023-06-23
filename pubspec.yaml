@@ -80,6 +80,8 @@ flutter:
     - assets/Map.png
     - assets/Map_icon.png
     - assets/icons/home.ico
+    - assets/icons/booking.ico
+    - assets/icons/user.ico
 
 
         # An image asset can refer to one or more resolution-specific "variants", see

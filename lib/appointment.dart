@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/my_bookings.dart';
-import 'package:flutterapp/sign_up.dart';
+import 'package:flutterapp/login/sign_up.dart';
 import 'package:flutterapp/theme/colors.dart';
 
 class AppointmentPage extends StatefulWidget {

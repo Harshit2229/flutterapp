@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterapp/sign_up.dart';
-import 'package:flutterapp/forgot_password_page.dart';
+import 'package:flutterapp/login/sign_up.dart';
+import 'package:flutterapp/login/forgot_password_page.dart';
 import 'package:flutterapp/app_large_text.dart';
 import 'package:flutterapp/home_screen.dart';
 import 'package:flutterapp/theme/colors.dart';
@@ -23,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.wB,
+      backgroundColor: AppColors.white,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -43,27 +43,24 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 30),
             Container(height: 30),
-             Padding(
-              padding: const EdgeInsets.all(16),
-              child: GradientText(
+             const Padding(
+              padding: EdgeInsets.all(16),
+              child: Text(
                 'Log In ',
-                style: const TextStyle(
+                style: TextStyle(
                   fontFamily: 'Poppins',
-                  color: AppColors.blue,
+                  color: AppColors.black,
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
-                colors: const [
-                  AppColors.darkBlue,
-                  AppColors.voilet,
-                  AppColors.lightPink,
-              ],
               ),
             ),
+            const SizedBox(height: 0.0),
+            Container(height: 0.0),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 children: [
                   Container(
@@ -71,20 +68,20 @@ class _LoginPageState extends State<LoginPage> {
                       borderRadius: BorderRadius.circular(30.0),
                       boxShadow: const [
                         BoxShadow(
-                          color: Color(0xffCFEAFF),
-                          spreadRadius: -2,
-                          blurRadius: 4,
-                          offset: Offset(0, 2),
+                          color: AppColors.white,
+                          blurRadius: 5,
+                          offset: Offset(0, 3),
                         ),
                       ],
                     ),
-                    child: const TextField(
-                      keyboardType: TextInputType.emailAddress,
-                      decoration: InputDecoration(
+                    child: TextField(
+                      keyboardType: TextInputType.visiblePassword,
+                      obscureText: _obscureText,
+                      decoration: const InputDecoration(
                         labelText: 'Email',
+                        ),
                       ),
                     ),
-                  )
                 ],
               ),
             ),
@@ -99,7 +96,7 @@ class _LoginPageState extends State<LoginPage> {
                       borderRadius: BorderRadius.circular(30.0),
                       boxShadow: const [
                         BoxShadow(
-                          color: Color(0xffCFEAFF),
+                          color: AppColors.white,
                           blurRadius: 5,
                           offset: Offset(0, 3),
                         ),
@@ -136,7 +133,7 @@ class _LoginPageState extends State<LoginPage> {
                     );
                   },
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(const Color(0xffCFEAFF)),
+                    backgroundColor: MaterialStateProperty.all<Color>(AppColors.blue),
                     padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
                       const EdgeInsets.symmetric(vertical: 16.0, horizontal: 70.0),
                       // Adjust the padding value as needed
@@ -146,23 +143,18 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(28.0),
+                        borderRadius: BorderRadius.circular(12.0),
                       ),
                     ),
                   ),
-                  child: GradientText(
-                    'Log In ',
-                    style: const TextStyle(
+                  child: const Text(
+                    'Login ',
+                    style: TextStyle(
                       fontFamily: 'Poppins',
-                      color: AppColors.blue,
+                      color: AppColors.white,
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
-                    colors: const [
-                      AppColors.darkBlue,
-                      AppColors.voilet,
-                      AppColors.lightPink,
-                    ],
                   ),
                 ),
               ),
@@ -209,7 +201,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             Container(
-              height: 60,
+              height: 40,
             ),
             Container(
               child: Column(

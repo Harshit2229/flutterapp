@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/theme/colors.dart';
-import 'package:flutterapp/wash_my_car.dart';
+import 'package:flutterapp/cars/wash_my_car.dart';
 import 'package:flutterapp/widgets/bottom_navigation_bar.dart';
 
 void main() {
@@ -36,6 +36,7 @@ class _HomePageState extends State<HomePage> {
                   height: 39.75,
                 ),
               ),
+              const SizedBox(height: 10.0,),
               ColorFiltered(
                 colorFilter: const ColorFilter.mode(
                   AppColors.white,
@@ -51,7 +52,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              const SizedBox(height: 50.0),
+              const SizedBox(height: 40.0),
               ElevatedButton(
                 style: ButtonStyle(
                   padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
@@ -96,14 +97,22 @@ class _HomePageState extends State<HomePage> {
                   BottomNavigationBarItem(
                     icon: RawMaterialButton(
                       onPressed: () {},
-                      child: Icon(Icons.search),
+                      child:Image.asset(
+                        'assets/icons/booking.ico',
+                        width: 24,
+                        height: 24,
+                      ),
                     ),
                     label: 'Search',
                   ),
                   BottomNavigationBarItem(
                     icon: RawMaterialButton(
                       onPressed: () {},
-                      child: Icon(Icons.person),
+                      child: Image.asset(
+                        'assets/icons/user.ico',
+                        width: 24,
+                        height: 24,
+                      ),
                     ),
                     label: 'Profile',
                   ),

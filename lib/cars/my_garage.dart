@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterapp/wash_my_car.dart';
+import 'package:flutterapp/cars/wash_my_car.dart';
 
 class Garage extends StatefulWidget {
   const Garage({super.key});

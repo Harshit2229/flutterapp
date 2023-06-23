@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterapp/login_page.dart';
+import 'package:flutterapp/login/login_page.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
   @override
