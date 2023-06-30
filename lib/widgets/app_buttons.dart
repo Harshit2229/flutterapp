@@ -13,7 +13,7 @@ class AppButtons extends StatelessWidget {
     required this.borderColor,
     required this.text,
     required this.size,
-    this.icon}) : super(key: key);
+    this.icon, required int width, required int height, required Null Function() onTap}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

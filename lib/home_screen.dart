@@ -118,7 +118,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
                 currentIndex: _selectedIndex,
-                onTap: (index) {
+                onTap: (index) { color: AppColors.blue;
                   setState(() {
                     _selectedIndex = index;
                   });

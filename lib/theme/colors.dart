@@ -11,4 +11,6 @@ class AppColors {
   static const  violet =  Color(0xFF843ADD);
   static const  lightPink =  Color(0xFFDC52FF);
   static const  wB =  Color(0xFFCFEAFF);
+  static const  lG =  Color(0xFFF1F1F1);
+
 }

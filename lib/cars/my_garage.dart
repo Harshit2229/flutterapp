@@ -18,6 +18,7 @@ class _GarageState extends State<Garage> {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+
       home: Scaffold(
         body: Column(
           children: <Widget>[
@@ -42,7 +43,7 @@ class _GarageState extends State<Garage> {
                   ),
                 ),
                 const Positioned(
-                  top: 50,
+                  top: 40,
                   child: Text(
                     'My Garage',
                     style: TextStyle(

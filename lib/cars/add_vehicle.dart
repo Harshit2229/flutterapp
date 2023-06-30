@@ -1,12 +1,15 @@
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterapp/cars/my_garage.dart';
 import 'package:flutterapp/theme/colors.dart';
-
+import 'package:flutterapp/utils.dart';
 import 'add_your_car.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 
 void main() {
-  runApp(AddVehiclePage());
+  runApp(const AddVehiclePage());
 }
 
 class AddVehiclePage extends StatelessWidget {
@@ -19,12 +22,14 @@ class AddVehiclePage extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ScrollableRowOfBoxes(),
+      home: const ScrollableRowOfBoxes(),
     );
   }
 }
 
 class ScrollableRowOfBoxes extends StatefulWidget {
+  const ScrollableRowOfBoxes({super.key});
+
   @override
   _ScrollableRowOfBoxesState createState() => _ScrollableRowOfBoxesState();
 }
@@ -40,6 +45,10 @@ class _ScrollableRowOfBoxesState extends State<ScrollableRowOfBoxes> {
   bool isSaveButtonFilled() {
     return isSaveButtonEnabled();
   }
+  final vehicleNameController =TextEditingController();
+  final colorController =TextEditingController();
+   bool loading = false;
+   final databaseRef = FirebaseDatabase.instance.ref('Vehicle');
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +80,7 @@ class _ScrollableRowOfBoxesState extends State<ScrollableRowOfBoxes> {
               padding: const EdgeInsets.only(left: 10, right: 10),
               alignment: Alignment.centerLeft,
               child: const Text(
-                'Choose a vehicle type',
+                'Add Vehicle',
                 style: TextStyle(
                   fontFamily: 'Poppins',
                   fontSize: 24,
@@ -129,6 +138,7 @@ class _ScrollableRowOfBoxesState extends State<ScrollableRowOfBoxes> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: TextFormField(
+                controller: vehicleNameController,
                 decoration: const InputDecoration(
                   labelText: 'Vehicle Name',
                   labelStyle: TextStyle( fontFamily: 'Poppins',
@@ -147,6 +157,7 @@ class _ScrollableRowOfBoxesState extends State<ScrollableRowOfBoxes> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: TextFormField(
+                controller: colorController,
                 decoration: const InputDecoration(
                   labelText: 'Color',
                   labelStyle: TextStyle( fontFamily: 'Poppins',
@@ -161,14 +172,14 @@ class _ScrollableRowOfBoxesState extends State<ScrollableRowOfBoxes> {
                 },
               ),
             ),
-            const SizedBox(height: 200),
+            const SizedBox(height: 190),
             Container(
               height: 1,
               color: AppColors.grey,
             ),
             const SizedBox(height: 20),
              Container(
-                padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
+                padding: const EdgeInsets.only(left: 20, right: 20,),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
@@ -205,6 +216,27 @@ class _ScrollableRowOfBoxesState extends State<ScrollableRowOfBoxes> {
                       ),
                       onPressed: isSaveButtonEnabled()
                           ? () {
+                        loading:loading;
+                        setState(() {
+                          loading=true;
+                        });
+                        databaseRef.child(DateTime.now().microsecondsSinceEpoch.toString())
+                            .set({
+                          'id' :DateTime.now().microsecondsSinceEpoch.toString(),
+                          'vehicle name' : vehicleNameController.text.toString(),
+                          'color' : colorController.text.toString(),
+                        })
+                            .then((value){
+                          Utils().toastMessage('Vehicle added');
+                          setState(() {
+                            loading=false;
+                          });
+                        }).onError((error, stackTrace){
+                          Utils().toastMessage(error.toString());
+                          setState(() {
+                            loading=false;
+                          });
+                        });
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => const Garage(),
@@ -230,7 +262,7 @@ class BoxItem extends StatefulWidget {
   final String image;
   final String text;
 
-  const BoxItem({
+  const BoxItem({super.key,
     required this.image,
     required this.text,
   });

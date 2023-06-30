@@ -1,5 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterapp/home_screen.dart';
+import 'package:flutterapp/login/login_page.dart';
+import 'package:flutterapp/utils.dart';
 
 void main() => runApp(const SignupApp());
 
@@ -64,6 +67,9 @@ class _SignupPageState extends State<SignupPage> {
   final _phoneController = TextEditingController();
   final _passwordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
+  final _auth=FirebaseAuth.instance;
+  final databaseRef=FirebaseDatabase.instance.ref('User Details');
+  final UserController=TextEditingController();
   bool _obscurePassword = true;
   bool _obscureConfirmPassword = true;
 
@@ -76,7 +82,24 @@ class _SignupPageState extends State<SignupPage> {
     _confirmPasswordController.dispose();
     super.dispose();
   }
+  void login(){
+    setState(() {
+      loading:true;
+    });
+    _auth.createUserWithEmailAndPassword(email: _emailController.text.toString(),
+        password: _passwordController.text.toString()).then((value){
+      setState(() {
+        Utils().toastMessage('Successfully Login');
+      });
 
+    }).onError((error, stackTrace) {
+      Utils().toastMessage(error.toString());
+      setState(() {
+        loading:false;
+      });
+    });
+
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -254,7 +277,8 @@ class _SignupPageState extends State<SignupPage> {
                             ),
                             onPressed: () {
                               if (_formKey.currentState!.validate()) {
-                                Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage(),));
+                                login();
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginPage(),));
                                 // Form is valid, perform signup
                                 // Handle button press
                               }
